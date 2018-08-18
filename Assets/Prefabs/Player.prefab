@@ -116,9 +116,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 5
+  jumpStun: 0.25
   jumpForce: 20
+  wallJumpForceX: 20
   jumpLimit: 1
-  whatIsGround:
+  wallCheckDistance: 0.85
+  wallLayerCheck:
     serializedVersion: 2
     m_Bits: 256
 --- !u!212 &212378462693732290
