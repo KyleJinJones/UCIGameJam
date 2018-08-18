@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 184
-    y: 112.8
+    x: 0
+    y: 44
     width: 1360
     height: 770
   m_ShowMode: 4
@@ -41,7 +41,7 @@ MonoBehaviour:
     x: 0
     y: 30
     width: 1360
-    height: 720
+    height: 635
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
     x: 1068
     y: 0
     width: 292
-    height: 720
+    height: 635
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
@@ -205,11 +205,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1068
-    height: 720
+    height: 635
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 10
+  controlID: 64
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -229,11 +229,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1068
-    height: 405
+    height: 357
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 11
+  controlID: 65
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -280,8 +280,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 184
-    y: 567.2
+    x: 0
+    y: 451
     width: 1066
     height: 294
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -303,14 +303,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\airma\Desktop\Git Rebase\UCIGameJam
+  m_LastProjectPath: /Users/jonraphaelapostol/Projects/Unity/UCISummerGameJam2018/UCIGameJam
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 522b0000
-    m_LastClickedID: 11090
-    m_ExpandedIDs: 00000000522b0000de2c000000ca9a3b
+    m_SelectedIDs: be2b0000
+    m_LastClickedID: 11198
+    m_ExpandedIDs: 00000000be2b00004e2d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -338,7 +338,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000522b0000de2c0000
+    m_ExpandedIDs: 00000000be2b00004e2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -413,8 +413,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1254.4
-    y: 162.40001
+    x: 1070
+    y: 94
     width: 290
     height: 699
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -447,16 +447,16 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 184
-    y: 162.40001
+    x: 0
+    y: 94
     width: 263
     height: 384
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: c6f9ffff00000000
+    m_SelectedIDs: baf8ffff
+    m_LastClickedID: -1862
+    m_ExpandedIDs: e6f8ffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -500,8 +500,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 451.2
-    y: 162.40001
+    x: 267
+    y: 94
     width: 799
     height: 384
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 267
-    y: 92
+    y: 94
     width: 799
     height: 336
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -594,10 +594,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -399.5
-    m_HBaseRangeMax: 399.5
-    m_VBaseRangeMin: -159.5
-    m_VBaseRangeMax: 159.5
+    m_HBaseRangeMin: -199.75
+    m_HBaseRangeMax: 199.75
+    m_VBaseRangeMin: -79.75
+    m_VBaseRangeMax: 79.75
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -617,7 +617,7 @@ MonoBehaviour:
       y: 17
       width: 799
       height: 319
-    m_Scale: {x: 1, y: 1}
+    m_Scale: {x: 2, y: 2}
     m_Translation: {x: 399.5, y: 159.5}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -625,15 +625,15 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -399.5
-      y: -159.5
-      width: 799
-      height: 319
+      x: -199.75
+      y: -79.75
+      width: 399.5
+      height: 159.5
     m_MinimalGUI: 1
-  m_defaultScale: 1
+  m_defaultScale: 2
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 799, y: 336}
+  m_LastWindowPixelSize: {x: 1598, y: 672}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
