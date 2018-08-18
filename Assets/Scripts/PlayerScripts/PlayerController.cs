@@ -54,20 +54,22 @@ public class PlayerController : MonoBehaviour {
             }
             else if (isGrounded == false && wallHitRight.collider != null)
             {
-                stunTimer = 0;
+                //stunTimer = 0;
                 rb.velocity = new Vector2(0, rb.velocity.y);
                 rb.AddForce(new Vector2(-wallJumpForceX, jumpForce), ForceMode2D.Impulse);
             }
             else if (isGrounded == false && wallHitLeft.collider != null)
             {
-                stunTimer = 0;
+                //stunTimer = 0;
                 rb.velocity = new Vector2(0, rb.velocity.y);
                 rb.AddForce(new Vector2(wallJumpForceX, jumpForce), ForceMode2D.Impulse);
             }
         }
+        
+        rb.AddForce(new Vector2(x, 0));
 
-        if(stunTimer > jumpStun)
-            rb.velocity = new Vector2(x, rb.velocity.y);
+        //if(stunTimer > jumpStun)
+        //    rb.velocity = new Vector2(x, rb.velocity.y);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
