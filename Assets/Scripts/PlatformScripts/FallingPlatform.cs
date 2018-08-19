@@ -33,19 +33,12 @@ public class FallingPlatform : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        //Raycasts to see if player is underneath
-        if (touched == false)
-        {
-            LayerMask layerMask = 1 << 9;
-            if (Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.up), 5, layerMask))
-            {
-                touched = true;
-            }
-        }
 
 
 
-        else
+
+
+        if (touched)
         {
             //moves the object
             Vector2 force = new Vector2();
@@ -61,6 +54,16 @@ public class FallingPlatform : MonoBehaviour {
             {
                 time++;
             }
+        }
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            
+            touched = true;
         }
     }
 

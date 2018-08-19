@@ -1,4 +1,5 @@
-Library/
+Library/*
+library/*
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
@@ -37,4 +38,6 @@ sysinfo.txt
 *.meta
 *.meta
 *.meta
+Library/assetDatabase3
+Library/CurrentLayout.dwlt
 Library/assetDatabase3
