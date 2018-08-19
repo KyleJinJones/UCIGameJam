@@ -15,7 +15,7 @@ public class StaminaBar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift)&&Stamina<100)
         {
             Stamina++;
         }

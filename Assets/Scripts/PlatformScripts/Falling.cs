@@ -36,7 +36,7 @@ public class Falling : MonoBehaviour
         if (touched == false)
         {
             LayerMask layerMask = 1 << 9;
-            if (Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.down), 5, layerMask))
+            if (Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.down), 20, layerMask))
             {
                 touched = true;
             }
