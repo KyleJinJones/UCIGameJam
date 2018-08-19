@@ -22,7 +22,11 @@ GameObject:
   - component: {fileID: 212261794220699050}
   - component: {fileID: 61737884145773274}
   - component: {fileID: 114204323737555728}
+<<<<<<< HEAD
+  - component: {fileID: 82666984583518736}
+=======
   - component: {fileID: 82121762880340362}
+>>>>>>> master
   m_Layer: 8
   m_Name: Trampoline
   m_TagString: Untagged
@@ -68,7 +72,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+<<<<<<< HEAD
+--- !u!82 &82666984583518736
+=======
 --- !u!82 &82121762880340362
+>>>>>>> master
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

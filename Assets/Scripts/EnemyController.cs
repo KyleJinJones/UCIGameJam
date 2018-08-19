@@ -88,16 +88,19 @@ public class EnemyController : MonoBehaviour {
 	void Update () {
 		if (Vector3.Distance(defaultPosition, transform.position) < idleThreasholdDistance) {
 			status = EmenyStatus.Normal;
+			Debug.Log(name + " is now " + status);
 		}
 		if (PlayerInSight()) {
 			status = EmenyStatus.Chasing;
+			Debug.Log(name + " is now " + status);
 		} 
 		if (Vector3.Distance(defaultPosition, transform.position) >= chaseThreasholdDistance) {
 			status = EmenyStatus.Backing;
+			Debug.Log(name + " is now " + status);
 		} 
 		
 
-		Debug.Log(status);
+		
 		switch (status) {
 				case EmenyStatus.Normal:
 					DefaultMove();

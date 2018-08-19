@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UIFunc : MonoBehaviour {
-    public GameObject pauseMenu;
-    public GameObject gameoverMenu;
+    public static GameObject pauseMenu;
+    public static GameObject gameoverMenu;
 	// Use this for initialization
 	void Start () {
 		
@@ -16,11 +16,11 @@ public class UIFunc : MonoBehaviour {
 		
 	}
 
-    public void ChangeLevel(int index)
+    public static void ChangeLevel(int index)
     {
         SceneManager.LoadScene(index);
     }
-    public void Pause()
+    public static void Pause()
     {
         if (pauseMenu.activeSelf)
         { 
@@ -33,11 +33,11 @@ public class UIFunc : MonoBehaviour {
             Time.timeScale = 0f;
         }
     }
-    public void GameOver()
+    public static void GameOver()
     {
         gameoverMenu.SetActive(true);
     }
-    public void Exit()
+    public static void Exit()
     {
         Application.Quit();
     }
