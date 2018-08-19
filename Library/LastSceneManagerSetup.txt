@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/BrianLevel2.unity
+=======
+- path: Assets/Scenes/BenTest.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1

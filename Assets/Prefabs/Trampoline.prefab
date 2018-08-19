@@ -22,7 +22,11 @@ GameObject:
   - component: {fileID: 212261794220699050}
   - component: {fileID: 61737884145773274}
   - component: {fileID: 114204323737555728}
+<<<<<<< HEAD
   - component: {fileID: 82666984583518736}
+=======
+  - component: {fileID: 82121762880340362}
+>>>>>>> master
   m_Layer: 8
   m_Name: Trampoline
   m_TagString: Untagged
@@ -37,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1990792532628528}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.18, y: -2.55, z: 0}
+  m_LocalPosition: {x: 7.437252, y: -3.2499166, z: 0}
   m_LocalScale: {x: 7.7715316, y: 1.5425543, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -68,7 +72,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!82 &82666984583518736
+=======
+--- !u!82 &82121762880340362
+>>>>>>> master
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,6 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b9e853091353f418b328b55c356305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SoundSource: {fileID: 82121762880340362}
   xForce: 0
   yForce: 30
 --- !u!212 &212261794220699050
