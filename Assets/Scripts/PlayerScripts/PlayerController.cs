@@ -21,11 +21,13 @@ public class PlayerController : MonoBehaviour {
     private StaminaBar sb;
     private float lastxpos;
     private float mass;
+    private SpriteRenderer sr;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sb = GetComponent<StaminaBar>();
+        sr = GetComponent<SpriteRenderer>();
         lastxpos = transform.position.x;
         mass=rb.mass;
     }
@@ -93,7 +95,19 @@ public class PlayerController : MonoBehaviour {
         if ((deltax > 0 && x < 0) || (deltax < 0 && x > 0))
         {
             rb.AddForce(new Vector2(x, 0));
+            
         }
+
+        //Sprite flipping
+        if (x > 0)
+        {
+            sr.flipX = false;
+        }
+        else
+        {
+            sr.flipX = true;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
