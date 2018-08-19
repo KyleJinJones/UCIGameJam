@@ -7,6 +7,12 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="EnemyController.cs" t="Include" />
+          <e p="Falling.cs" t="Include" />
+          <e p="FallingPlatform.cs" t="Include" />
+          <e p="MovingPlatform.cs" t="Include" />
+          <e p="Obstacle.cs" t="Include" />
+          <e p="ObstacleManager.cs" t="Include" />
+          <e p="Pickup.cs" t="Include" />
           <e p="PlatformScripts" t="Include">
             <e p="DeathWall.cs" t="Include" />
             <e p="KillZone.cs" t="Include" />
@@ -16,6 +22,7 @@
             <e p="PlayerCamera.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
           </e>
+          <e p="UIFunc.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
