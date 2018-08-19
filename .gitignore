@@ -1,4 +1,4 @@
-[Ll]ibrary/
+Library/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
@@ -34,3 +34,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+*.meta
+*.meta
+*.meta
+Library/assetDatabase3
