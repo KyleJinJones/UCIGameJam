@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Trampoline : MonoBehaviour {
 
+    public AudioSource SoundSource;
+
     Rigidbody2D rb;
 
     public float xForce = 0.0f;
@@ -17,5 +19,7 @@ public class Trampoline : MonoBehaviour {
         rb.velocity = new Vector2(0, 0);
 
         rb.AddForce(launcher, ForceMode2D.Impulse);
+
+        SoundSource.Play();
     }
 }
