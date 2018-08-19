@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public float runSpeed = 5.0f;
+    public float runSpeed = 70.0f;
+    public float sprintSpeed = 100.0f;
     public float jumpForce = 20.0f;
     public float wallJumpForceX = 5.0f;
     public int jumpLimit = 1;
@@ -14,15 +15,22 @@ public class PlayerController : MonoBehaviour {
     private int jumpCount = 0;
     private bool isGrounded = false;
     private Rigidbody2D rb;
+    private StaminaBar sb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sb = GetComponent<StaminaBar>();
     }
 
     void FixedUpdate ()
     {
-        float x = Input.GetAxis("Horizontal") * runSpeed;
+        float speed = runSpeed;
+        if (Input.GetKey(KeyCode.LeftShift) && sb.Stamina < 100)
+        {
+            speed = sprintSpeed;
+        }
+        float x = Input.GetAxis("Horizontal") * speed;
         Vector2 y = new Vector2(0.0f, jumpForce);
 
         //wall collision detectors
