@@ -10,33 +10,45 @@ public class PlayerController : MonoBehaviour {
     public float wallJumpForceX = 5.0f;
     public int jumpLimit = 1;
     public float wallCheckDistance = 1.1f;
+    public float wallCheckOffset = 0.0f;
     public LayerMask wallLayerCheck;
+    public float speedlimit=10;
+    public float sprintspeedlimit = .28f;
 
     private int jumpCount = 0;
     private bool isGrounded = false;
     private Rigidbody2D rb;
     private StaminaBar sb;
+    private float lastxpos;
+    private float mass;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sb = GetComponent<StaminaBar>();
+        lastxpos = transform.position.x;
+        mass=rb.mass;
     }
 
     void FixedUpdate ()
     {
+        float deltax = transform.position.x - lastxpos;
+        lastxpos = transform.position.x;
+
         float speed = runSpeed;
         if (Input.GetKey(KeyCode.LeftShift) && sb.Stamina < 100)
         {
             speed = sprintSpeed;
         }
+
         float x = Input.GetAxis("Horizontal") * speed;
         Vector2 y = new Vector2(0.0f, jumpForce);
 
         //wall collision detectors
-        RaycastHit2D wallHitLeft = Physics2D.Raycast(transform.position, Vector2.left, wallCheckDistance, wallLayerCheck);
-        RaycastHit2D wallHitRight = Physics2D.Raycast(transform.position, Vector2.right, wallCheckDistance, wallLayerCheck);
+        RaycastHit2D wallHitLeft = Physics2D.Raycast(transform.position, new Vector2(-1.5f, wallCheckOffset), wallCheckDistance, wallLayerCheck);
+        RaycastHit2D wallHitRight = Physics2D.Raycast(transform.position, new Vector2(1, wallCheckOffset), wallCheckDistance, wallLayerCheck);
 
+        
         //smooth wall sliding
         if (wallHitLeft.collider != null)
         {
@@ -67,17 +79,32 @@ public class PlayerController : MonoBehaviour {
                 rb.AddForce(new Vector2(wallJumpForceX, jumpForce), ForceMode2D.Impulse);
             }
         }
+
+        if (deltax > -speedlimit && deltax < speedlimit)
+        {
+            rb.AddForce(new Vector2(x, 0));
+        }
+        else if(speed==sprintSpeed&& deltax > -sprintspeedlimit && deltax < sprintspeedlimit)
+        {
+            rb.AddForce(new Vector2(x, 0));
+        }
         
-        rb.AddForce(new Vector2(x, 0));
+
+        if ((deltax > 0 && x < 0) || (deltax < 0 && x > 0))
+        {
+            rb.AddForce(new Vector2(x, 0));
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        isGrounded = true;
+        if(collision.gameObject.layer == 8)
+            isGrounded = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        isGrounded = false;
+        if (collision.gameObject.layer == 8)
+            isGrounded = false;
     }
 }
