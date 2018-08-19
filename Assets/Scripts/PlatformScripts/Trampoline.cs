@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Trampoline : MonoBehaviour {
 
-    public AudioSource SoundSource;
+    private AudioSource SoundSource;
 
     Rigidbody2D rb;
 
     public float xForce = 0.0f;
     public float yForce = 0.0f;
+
+    private void Start() {
+        SoundSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
